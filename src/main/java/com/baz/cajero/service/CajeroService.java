@@ -162,7 +162,7 @@ public class CajeroService {
             BigDecimal saldoRestante = getSaldoTotal();
 
             return new RetiroResponse(
-                    true,
+                    true,  // ✅ Esto asignará correctamente a 'success'
                     "Retiro exitoso",
                     denominaciones,
                     saldoRestante

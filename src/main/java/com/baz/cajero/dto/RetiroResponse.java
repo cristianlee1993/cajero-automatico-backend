@@ -1,13 +1,8 @@
 package com.baz.cajero.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
 import java.util.Map;
 
-@Data
 public class RetiroResponse {
     private boolean success;
     private String message;
@@ -24,4 +19,39 @@ public class RetiroResponse {
         this.saldoRestante = saldoRestante;
     }
 
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public boolean getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Map<BigDecimal, Integer> getDenominations() {
+        return denominations;
+    }
+
+    public void setDenominations(Map<BigDecimal, Integer> denominations) {
+        this.denominations = denominations;
+    }
+
+    public BigDecimal getSaldoRestante() {
+        return saldoRestante;
+    }
+
+    public void setSaldoRestante(BigDecimal saldoRestante) {
+        this.saldoRestante = saldoRestante;
+    }
 }
